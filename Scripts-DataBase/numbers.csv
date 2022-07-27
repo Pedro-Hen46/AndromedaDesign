@@ -1,0 +1,6 @@
+phonetic_name,last_time_contacted,send_to_voicemail,custom_ringtone,notes,label,display_name,type,isprimary,number_key,primary_phone,number,starred,person,name,times_contacted,primary_organization,primary_email,_id
+,0,0,,,,"Siga me CP des",2,1,#12##,79,##21#,0,35,"Siga me CP des",0,,,79
+,0,0,,,,"Siga me CP ati",2,1,#001*12**,84,**21*100#,0,36,"Siga me CP ati",0,,,84
+,0,0,,,,"Caixa Postal",2,1,001*,74,*100,0,34,"Caixa Postal",0,,,74
+,0,0,,,,"TIM Exterior",2,1,441674821155+,89,+551128476144,0,37,"TIM Exterior",0,,,89
+,0,0,,,,"CP no Exterior",2,1,0010141891155+,69,+5511981410100,0,33,"CP no Exterior",0,,,69
