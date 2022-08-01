@@ -1,1 +1,205 @@
-<h1>Mensagens SMS</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensagens SMS</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: "Montserrat";
+      font-weight: 600;
+    }
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    ion-icon {
+      margin-right: 20px;
+      font-size: 28px;
+    }
+    .container-mensagens {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .mensagem {
+      width: 70%;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+
+      position: relative;
+    }
+    .descricao-mensagem div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .perfil-icon {
+      font-size: 72px;
+      margin-right: 20px;
+    }
+    .little-icon {
+      font-size: 18px;
+      margin-right: 2px;
+    }
+    span {
+      font-family: "Montserrat";
+      font-weight: 300;
+    }
+    h4{
+      font-family: 'Montserrat';
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+    }
+    .info-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10px;
+      padding: 20px;
+      position: absolute;
+      margin-top: 6px;
+      border-radius: 10px;
+      right: 0px;
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    }
+    .recebida {
+      background-color: red;
+    }
+    .enviada {
+      background-color: green;
+    }
+    h6 {
+      color: #ffffff;
+      font-family: "Montserrat";
+      font-size: 12px;
+      font-weight: 500;
+
+      writing-mode: vertical-rl;
+    }
+    h6:hover {
+      cursor: default;
+    }
+
+    .buttons-filter {
+      display: flex;
+      flex-direction: column;
+
+      position: fixed;
+      left: 10px;
+      top: 45%;
+      z-index: 1;
+    }
+    .buttons-filter div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      transition: 0.2s linear;
+    }
+    .buttons-filter div:hover {
+      cursor: pointer;
+      font-size: 18px;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+    h5 {
+      font-family: "Montserrat";
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .tipo-mensagem {
+      color: #ffffff;
+      font-weight: bold;
+    }
+  </style>
+  <body onload="messageMap()">
+    <div class="header">
+      <ion-icon name="mail"></ion-icon>
+      <h1>Relatório de Mensagens SMS</h1>
+    </div>
+    <h5>Mostrando: <strong>Todas Mensagens</strong></h5>
+
+    <!-- Menu lateral para filtrar -->
+    <div class="buttons-filter">
+        <div>
+            <ion-icon class="little-icon" name="mail"></ion-icon>
+            <span>Todas</span>
+          </div>
+      <div>
+        <ion-icon class="little-icon" name="mail"></ion-icon>
+        <span>Enviadas</span>
+      </div>
+      <div>
+        <ion-icon class="little-icon" name="mail"></ion-icon>
+        <span>Recebidas</span>
+      </div>
+    </div>
+
+    <div class="container-mensagens">
+      <!-- <div class="mensagem">
+        <ion-icon class="perfil-icon" name="person"></ion-icon>
+        <div class="descricao-mensagem">
+          <div>
+            <ion-icon class="little-icon" name="phone-portrait"></ion-icon
+            ><span>+1899625 7029 - <strong>(Pedro Dev)</strong></span>
+          </div>
+          <div>
+            <span
+              >Fala pedro, blz? Como faço pagamento no pix? Estou tentando
+              entrar em contato mais não estou conseguindo pelo Whatsapp</span
+            >
+          </div>
+          <div class="info-message recebida">
+            <h5 class="tipo-mensagem">Mensagem recebida.</h5>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- Inicio dos scripts para conexao. -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../../Scripts-DataBase/Menu.js"></script>
+  </body>
+</html>

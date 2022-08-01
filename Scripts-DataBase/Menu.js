@@ -26,6 +26,51 @@ function CallsMap() {
   }
 }
 
+function messageMap() {
+  const message = document.querySelector(".container-mensagens");
+
+  for (let i = 0; i < 4; i++) {
+    message.innerHTML += `
+    <div class="mensagem">
+    <ion-icon class="perfil-icon" name="person"></ion-icon>
+    <div class="descricao-mensagem">
+      <div>
+        <ion-icon class="little-icon" name="phone-portrait"></ion-icon
+        ><span>+1899625 7029 - <strong>(Edvaldo)</strong></span>
+      </div>
+      <div>
+        <h4
+          >Fala pedro, blz? Como faço pagamento no pix? Estou tentando
+          entrar em contato mais não estou conseguindo pelo Whatsapp</h4
+        >
+      </div>
+      <div class="info-message recebida">
+        <h5 class="tipo-mensagem">Mensagem recebida.</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="mensagem">
+  <ion-icon class="perfil-icon" name="person"></ion-icon>
+  <div class="descricao-mensagem">
+    <div>
+      <ion-icon class="little-icon" name="phone-portrait"></ion-icon
+      ><span>+1892315 7029 - <strong>(Arthur - Filho)</strong></span>
+    </div>
+    <div>
+      <h4
+        >Filho, vc tirou as roupas do varal? Sua mãe vai ficar nervosa com vc, ela tinha pedido pra tirar...</h4
+      >
+    </div>
+    <div class="info-message enviada">
+      <h5 class="tipo-mensagem">Mensagem enviada.</h5>
+    </div>
+  </div>
+</div>
+   `;
+  }
+}
+
 // +-------------------------------+
 // |  FUNCOES PARA TROCAR DE TELA  |
 // +-------------------------------+
