@@ -24,14 +24,13 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       font-family: "Montserrat";
-      font-weight: 400;
+      font-weight: 600;
     }
     .header {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
     }
     ion-icon {
       margin-right: 20px;
@@ -75,19 +74,19 @@
       font-family: "Montserrat";
       font-weight: 300;
     }
-    .info{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 100%;
+    .info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 100%;
 
-        padding: 20px;
-        position: absolute;
-        right: 10px;
-        background-color: red;
-        
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      position: absolute;
+      right: 10px;
+      background-color: red;
+
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     }
     h6 {
       color: #ffffff;
@@ -100,11 +99,59 @@
     h6:hover {
       cursor: default;
     }
+
+    .buttons-filter {
+      display: flex;
+      flex-direction: column;
+
+      position: fixed;
+      left: 10px;
+      top: 45%;
+      z-index: 1;
+    }
+    .buttons-filter div{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      transition: 0.2s linear;
+    }
+    .buttons-filter div:hover{
+      cursor: pointer;
+      font-size: 18px;
+      text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
+    h5{
+      font-family: 'Montserrat';
+      font-weight: 400;
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
   </style>
   <body onload="CallsMap()">
     <div class="header">
       <ion-icon name="call"></ion-icon>
       <h1>Relatório de Ligações Telefônicas</h1>
+    </div>
+    <h5>Ordenado por: <strong>Ligações Recentes</strong></h5>
+    <div class="buttons-filter">
+      <div>
+        <ion-icon class="little-icon" name="calendar"></ion-icon>
+        <span>Recentes</span>
+      </div>
+      <div>
+        <ion-icon class="little-icon" name="call"></ion-icon>
+        <span>Mais Ligados</span>
+      </div>
+      <div>
+        <ion-icon class="little-icon" name="person-add"></ion-icon>
+        <span>Não Salvos</span>
+      </div>
+      <div><ion-icon class="little-icon" name="person"></ion-icon>
+        <span>Salvos</span>
+      </div>
     </div>
     <div class="container-ligacoes">
       <!-- <div class="call">

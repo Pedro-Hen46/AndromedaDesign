@@ -11,7 +11,7 @@
   width: 100%;
   height: 100vh;
 }
-.sidebar-right{
+.sidebar-right {
   width: 100%;
   height: 100%;
 }
@@ -24,8 +24,23 @@
   align-items: center;
   justify-content: center;
 }
-
+.imagem:hover{
+  filter: brightness(1.15);
+}
 /* PARA TELAS GRANDES */
+@media (min-width: 1390px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button{
+    height: 60px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
+/* PARA TELAS MEDIA */
 @media (min-width: 800px) {
   .sidemenu {
     height: 100%;
@@ -75,12 +90,12 @@
     margin-right: -10px;
     object-fit: contain;
   }
-.imagem:hover{
-  cursor: pointer;
-}
-.laudo-name:hover{
-  cursor: pointer;
-}
+  .imagem:hover {
+    cursor: pointer;
+  }
+  .laudo-name:hover {
+    cursor: pointer;
+  }
   .menu {
     width: 100%;
     padding: 10px;
@@ -94,11 +109,11 @@
   button {
     width: 100%;
     max-width: 550px;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     background-color: white;
     border: thin solid lightgray;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     text-transform: uppercase;
     font-size: 14px;
