@@ -1,0 +1,16 @@
+body{
+    box-sizing: border-box;
+    background-color: red;
+}
+.container{
+    display: flex;
+}
+.menu{
+    width: 40%;
+    height: 100vh;
+}
+
+.content{
+    width: 60%;
+    height: 100vh;
+}

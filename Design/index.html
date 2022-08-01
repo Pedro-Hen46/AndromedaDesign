@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/MenuAssets/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>LHS SISTEMAS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidemenu">
+        <div class="menu-superior">
+          <img onclick="showHome()" class="imagem" src="./Smartphone.png" alt="iPhone" />
+          <div class="descricao-celular">
+            <h1  onclick="showHome()" class="laudo-name">Laudo - 001.983-24</h1>
+            <h3>Investigado: <strong>Luiz Henrique da Silva</strong></h3>
+            <div>
+              <h3>Modelo do Aparelho: <strong>iPhone XS MAX</strong></h3>
+              <h3>Fabricante: <strong>Apple</strong></h3>
+              <h3>Número de Série: <strong>DV6V820KHG7K</strong></h3>
+              <h3>
+                IMEI do Aparelho: <strong>91293192381208048012412</strong>
+              </h3>
+              <h3>Númeo de telefone: <strong>+55 18 996000012</strong></h3>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <button onclick="showWhatsapp()" >
+            <ion-icon name="logo-whatsapp"></ion-icon>Visualizar Whatsapp
+          </button>
+          <button  onclick="showAgendaWhatsapp()">
+            <ion-icon name="logo-whatsapp"></ion-icon>Visualizar Agenda Whatsapp
+          </button>
+          <button onclick="showSMS()">
+            <ion-icon name="mail"></ion-icon>Visualizar Mensagens SMS
+          </button>
+          <button onclick="showAgendaTelefonica()">
+            <ion-icon name="mail"></ion-icon>Visualizar Agenda Telefonica
+          </button>
+          <button onclick="showLigacoes()">
+            <ion-icon name="call"></ion-icon>Visualizar Ligações Telefonicas
+          </button>
+          <button onclick="showExtras()">
+            <ion-icon name="construct"></ion-icon>Visualizar Extras
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <iframe class="sidebar-right" name="" src="./Pages/Home.html"> </iframe>
+      </div>
+    </div>
+
+    <!-- Inicio dos scripts para conexao. -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="../Scripts-DataBase/Menu.js"></script>
+  </body>
+</html>

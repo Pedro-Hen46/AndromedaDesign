@@ -2,33 +2,32 @@
   box-sizing: border-box;
 }
 .container {
-  top: 0;
-  left: 0;
+  width: 100%;
+  display: flex;
+  background-image: linear-gradient(140deg, #b8c6db, #f0f3f8);
+}
+.content {
+  margin-left: 15px;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(140deg, #b8c6db, #f0f3f8);
+}
+.sidebar-right{
+  width: 100%;
+  height: 100%;
+}
+.sidemenu {
+  top: 0;
+  left: 0;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-@media (min-height: 700px){
-    .container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 150vh;
-        background-image: linear-gradient(140deg, #b8c6db, #f0f3f8);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-}
+
 /* PARA TELAS GRANDES */
 @media (min-width: 800px) {
-  .container {
+  .sidemenu {
     height: 100%;
   }
   h1 {
@@ -55,6 +54,8 @@
     align-items: center;
   }
   .descricao-celular {
+    margin-bottom: 10px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,11 +72,19 @@
     z-index: 1;
     width: 120px;
     height: 280px;
-    margin-right: -40px;
+    margin-right: -10px;
     object-fit: contain;
   }
-
+.imagem:hover{
+  cursor: pointer;
+}
+.laudo-name:hover{
+  cursor: pointer;
+}
   .menu {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,16 +92,16 @@
   }
 
   button {
-    height: 70px;
-    width: 80%;
+    width: 100%;
+    max-width: 550px;
+    height: 50px;
     border-radius: 10px;
     background-color: white;
     border: thin solid lightgray;
     margin-bottom: 20px;
 
     text-transform: uppercase;
-    min-width: 550px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     font-family: "Montserrat";
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -102,10 +111,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
   }
   ion-icon {
+    position: absolute;
     font-size: 22px;
-    margin-right: 20px;
+    left: 10px;
   }
   button:hover {
     font-weight: 700;
@@ -113,137 +125,153 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   }
 }
+
+/* @media (min-height: 700px){
+  .sidemenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 150vh;
+      background-image: linear-gradient(140deg, #b8c6db, #f0f3f8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+} */
 
 /* PARA TELAS MEDIAS */
-@media (max-width: 800px) {
-  .container {
-    height: 100%;
-  }
-  h1 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 700;
-    font-size: 20px;
-    font-family: "Montserrat";
-  }
-  h3 {
-    margin-top: 10px;
-    font-weight: 300;
-    font-size: 14px;
-    font-family: "Montserrat";
-  }
-  strong {
-    font-weight: 600;
-  }
-  .menu-superior {
-    width: 90%;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .descricao-celular {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    max-width: 450px;
-    height: auto;
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 0;
-  }
-  .imagem {
-    z-index: 1;
-    width: 120px;
-    height: 280px;
-    margin-right: -20px;
-    object-fit: contain;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  button {
-    height: 70px;
-    width: 80%;
-    border-radius: 10px;
-    background-color: white;
-    border: thin solid lightgray;
-    margin-bottom: 20px;
-
-    text-transform: uppercase;
-    min-width: 490px;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "Montserrat";
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-
-    transition: all 0.3s;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  ion-icon {
-    font-size: 22px;
-    margin-right: 20px;
-  }
-  button:hover {
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  }
+/* @media (max-width: 800px) {
+.sidemenu {
+  height: 100%;
 }
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Montserrat";
+}
+h3 {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: "Montserrat";
+}
+strong {
+  font-weight: 600;
+}
+.menu-superior {
+  width: 90%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descricao-celular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  max-width: 450px;
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 0;
+}
+.imagem {
+  z-index: 1;
+  width: 120px;
+  height: 280px;
+  margin-right: -40px;
+  object-fit: contain;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  height: 70px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: white;
+  border: thin solid lightgray;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  min-width: 495px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Montserrat";
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ion-icon {
+  font-size: 22px;
+  margin-right: 20px;
+}
+button:hover {
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+} */
+
 /* MENOR TELA POSSIVEL */
-@media (max-width: 650px) {
-  .container {
-    height: 100%;
-  }
-  .menu-superior {
-    margin-top: 20px;
-  }
-  .descricao-celular {
-    min-width: 400px;
-    margin-bottom: 20px;
-  }
-  .imagem {
-    display: none;
-  }
-  button {
-    height: 70px;
-    width: 80%;
-    min-width: 400px;
-    border-radius: 10px;
-    background-color: white;
-    border: thin solid lightgray;
-    margin-bottom: 20px;
-
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 400;
-    font-family: "Montserrat";
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-
-    transition: all 0.3s;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  ion-icon {
-    font-size: 22px;
-    margin-right: 20px;
-  }
-  button:hover {
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  }
+/* @media (max-width: 650px) {
+.sidemenu {
+  height: 100%;
 }
+.menu-superior {
+  margin-top: 20px;
+}
+.descricao-celular {
+  min-width: 400px;
+  margin-bottom: 20px;
+}
+.imagem {
+  display: none;
+}
+button {
+  height: 70px;
+  width: 80%;
+  min-width: 400px;
+  border-radius: 10px;
+  background-color: white;
+  border: thin solid lightgray;
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Montserrat";
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ion-icon {
+  font-size: 22px;
+  margin-right: 20px;
+}
+button:hover {
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+} */
