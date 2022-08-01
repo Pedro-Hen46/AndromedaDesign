@@ -6,18 +6,18 @@ function CallsMap() {
   <div class="call">
     <ion-icon class="perfil-icon" name="person"></ion-icon>
     <div class="descricao-ligacao">
+    <div><ion-icon class="little-icon" name="calendar"></ion-icon><span>Data da Ligação: <strong>18/06/2022 as 14:24h</span></strong></div>
       <div><ion-icon class="little-icon" name="phone-portrait"></ion-icon><span>Celular: <strong>+18 99625 7029</strong></span></div>
       <div><ion-icon class="little-icon" name="finger-print"></ion-icon><span>Nome do Contato: <strong>Pedro Lindo</span></strong></div>
-      <div><ion-icon class="little-icon" name="calendar"></ion-icon><span>Data da Ligação: <strong>18/06/2022</span></strong></div>
       <div><ion-icon class="little-icon" name="alarm"></ion-icon><span>Duração da Chamada: <strong>3 Minutos</strong></span></div>
     </div>
   </div>
   <div class="call">
   <ion-icon class="perfil-icon" name="person-add"></ion-icon>
   <div class="descricao-ligacao">
+  <div><ion-icon class="little-icon" name="calendar"></ion-icon><span>Data da Ligação: <strong>02/06/2022 as 18:24h</span></strong></div>
     <div><ion-icon class="little-icon" name="phone-portrait"></ion-icon><span>Celular: <strong>+18 998812-3812</strong></span></div>
     <div><ion-icon class="little-icon" name="finger-print"></ion-icon><span>Nome do Contato: <strong>Não cadastrado</span></strong></div>
-    <div><ion-icon class="little-icon" name="calendar"></ion-icon><span>Data da Ligação: <strong>18/06/2022</span></strong></div>
     <div><ion-icon class="little-icon" name="alarm"></ion-icon><span>Duração da Chamada: <strong>3 Minutos</strong></span></div>
   </div>
   <div class="info"><h6>CONTATO NÃO CADASTRADO.</h6></div>
@@ -37,6 +37,7 @@ function messageMap() {
       <div>
         <ion-icon class="little-icon" name="phone-portrait"></ion-icon
         ><span>+1899625 7029 - <strong>(Edvaldo)</strong></span>
+
       </div>
       <div>
         <h4
@@ -46,6 +47,7 @@ function messageMap() {
       </div>
       <div class="info-message recebida">
         <h5 class="tipo-mensagem">Mensagem recebida.</h5>
+        <h5 class="tipo-mensagem">02/08/2022 as 13:09h</h5>
       </div>
     </div>
   </div>
@@ -63,7 +65,8 @@ function messageMap() {
       >
     </div>
     <div class="info-message enviada">
-      <h5 class="tipo-mensagem">Mensagem enviada.</h5>
+      <h5 class="tipo-mensagem">Mensagem enviada. </h5>
+      <h5 class="tipo-mensagem">02/08/2022 as 13:09h</h5>
     </div>
   </div>
 </div>
